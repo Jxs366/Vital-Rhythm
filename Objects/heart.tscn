@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7xfb8xq4fjww"]
+
+[ext_resource type="Texture2D" uid="uid://bv50t6w04h1y5" path="res://Assets/Corazon.png" id="1_d18o2"]
+[ext_resource type="Script" uid="uid://dyacorbveh5q2" path="res://Objects/heart.gd" id="2_i6nch"]
+
+[node name="Heart" type="Sprite2D"]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_d18o2")
+script = ExtResource("2_i6nch")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 7.0
+one_shot = true
+autostart = true
+
+[node name="DestroyTimer" type="Timer" parent="."]
+wait_time = 0.508
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="DestroyTimer" to="." method="_on_destroy_timer_timeout"]

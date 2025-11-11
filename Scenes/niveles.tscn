@@ -1,0 +1,246 @@
+[gd_scene load_steps=12 format=3 uid="uid://bblaqcxat4vj7"]
+
+[ext_resource type="Script" uid="uid://b5xh2mk67b8su" path="res://Scripts/niveles.gd" id="1_64gli"]
+[ext_resource type="Texture2D" uid="uid://cpfmntueekq22" path="res://Assets/Menu.jpg" id="1_co50j"]
+[ext_resource type="Texture2D" uid="uid://cihf18qgfoo6m" path="res://Assets/Album Covers/Die Hard.png" id="2_m3smg"]
+[ext_resource type="Texture2D" uid="uid://c7m5q3ni7irwu" path="res://Assets/Album Covers/Thriller.jpeg" id="3_yfvhi"]
+[ext_resource type="Texture2D" uid="uid://cn5vqlbho47d5" path="res://Assets/RegresarIcon.png" id="4_64gli"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_co50j"]
+bg_color = Color(0.22418842, 0.630765, 0.9205275, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j71j1"]
+bg_color = Color(0.19440001, 0.5535001, 0.81, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a1cui"]
+bg_color = Color(0.3496, 0.68233347, 0.92, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgabm"]
+bg_color = Color(0.9752062, 0.31443977, 0.36635706, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64gli"]
+bg_color = Color(0.86658764, 0.27371827, 0.27371827, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a53wg"]
+bg_color = Color(1, 0.5460356, 0.5460356, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="niveles" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_64gli")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.45840502, 0.45840508, 0.45840502, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_co50j")
+expand_mode = 1
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Nivel 1" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -487.0
+offset_top = -185.0
+offset_right = 487.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Nivel 1"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -80.0
+offset_right = 175.0
+offset_bottom = 80.0
+grow_vertical = 2
+texture = ExtResource("2_m3smg")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Nivel 1"]
+layout_mode = 1
+offset_left = 188.0
+offset_right = 361.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0.003921569, 0, 0, 1)
+theme_override_font_sizes/font_size = 41
+text = "Die Hard"
+
+[node name="Label" type="Label" parent="Nivel 1/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.67300004
+anchor_top = 1.5180001
+anchor_right = 0.67300004
+anchor_bottom = 1.5180001
+offset_left = -114.42901
+offset_top = -28.526009
+offset_right = 58.57099
+offset_bottom = 28.473991
+theme_override_colors/font_color = Color(0.003921569, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Kendrick Lamar"
+
+[node name="PlayBtn1" type="Button" parent="Nivel 1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 325.0
+offset_top = -34.0
+offset_right = 421.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_co50j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j71j1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a1cui")
+text = "Play"
+
+[node name="Nivel 2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -487.0
+offset_top = 22.0
+offset_right = 487.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Nivel 2"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -80.0
+offset_right = 175.0
+offset_bottom = 80.0
+grow_vertical = 2
+texture = ExtResource("3_yfvhi")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Nivel 2"]
+layout_mode = 1
+offset_left = 188.0
+offset_right = 361.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0.003921569, 0, 0, 1)
+theme_override_font_sizes/font_size = 41
+text = "Thriller"
+
+[node name="Label" type="Label" parent="Nivel 2/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.67300004
+anchor_top = 1.5180001
+anchor_right = 0.67300004
+anchor_bottom = 1.5180001
+offset_left = -114.42901
+offset_top = -28.526009
+offset_right = 58.57099
+offset_bottom = 28.473991
+theme_override_colors/font_color = Color(0.003921569, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Michael Jackson"
+
+[node name="PlayBtn2" type="Button" parent="Nivel 2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -158.0
+offset_top = -34.5
+offset_right = -62.0
+offset_bottom = 34.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_co50j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j71j1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a1cui")
+text = "Play"
+
+[node name="RegresarBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 919.0
+offset_top = 26.0
+offset_right = 1063.0
+offset_bottom = 117.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_jgabm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_64gli")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a53wg")
+icon = ExtResource("4_64gli")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Nivel 1/PlayBtn1" to="." method="_on_play_btn_1_pressed"]
+[connection signal="pressed" from="Nivel 2/PlayBtn2" to="." method="_on_play_btn_2_pressed"]
+[connection signal="pressed" from="RegresarBtn" to="." method="_on_button_pressed"]

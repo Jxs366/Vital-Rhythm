@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://b72u1oi0mks7n"]
+
+[ext_resource type="Texture2D" uid="uid://c6c4hwm2q6y6g" path="res://Assets/Fondo parque.png" id="1_cfwl0"]
+[ext_resource type="Script" uid="uid://cestnsn67p67p" path="res://Scripts/nivel_1.gd" id="1_ecx5m"]
+[ext_resource type="Texture2D" uid="uid://dlyfjxtpmdphc" path="res://Assets/PausaBtn.png" id="2_3givb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ecx5m"]
+texture = ExtResource("2_3givb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_epurl"]
+texture = ExtResource("2_3givb")
+modulate_color = Color(0.6784314, 0.6784314, 0.6784314, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hwnlj"]
+texture = ExtResource("2_3givb")
+modulate_color = Color(1.1638972, 1.1638972, 1.1638972, 1)
+
+[node name="Nivel1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ecx5m")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cfwl0")
+expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PausaBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -33.0
+offset_top = 13.0
+offset_right = 33.0
+offset_bottom = 75.0
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_ecx5m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_epurl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hwnlj")
+
+[connection signal="pressed" from="PausaBtn" to="." method="_on_pausa_btn_pressed"]

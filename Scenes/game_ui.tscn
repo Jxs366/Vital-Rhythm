@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7kisb2jbrrst"]
+
+[ext_resource type="Script" uid="uid://cpqgo6eexcysb" path="res://Scripts/game_ui.gd" id="1_gek4i"]
+[ext_resource type="Texture2D" uid="uid://ev5hg8s0ta4y" path="res://Assets/Barra.png" id="2_bw2rt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xjnnq"]
+texture = ExtResource("2_bw2rt")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x63ue"]
+bg_color = Color(0.33333334, 0.6862745, 0.29411766, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[node name="GameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.18792725
+offset_right = 0.18792725
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gek4i")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthBar" type="ProgressBar" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 40.0
+offset_top = 604.0
+offset_right = 357.81207
+offset_bottom = 631.0
+rotation = -1.5707964
+theme_override_styles/background = SubResource("StyleBoxTexture_xjnnq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_x63ue")
+value = 100.0
+show_percentage = false
